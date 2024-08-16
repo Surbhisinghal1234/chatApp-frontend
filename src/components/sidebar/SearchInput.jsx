@@ -1,20 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
+import useConversation from "../../zustand/useConversation";
+import useGetConversations from "../../hooks/useGetConversation";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SearchInput = () => {
+  const [search, setSearch] = useState("");
+  const { setSelectedConversation } = useConversation();
+  const { conversations } = useGetConversations();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!search) {
+      return;
+    }
+
+    const conversation = conversations.find((con) => con.username.toLowerCase().includes(search.toLowerCase()));
+
+    if (conversation) {
+      setSelectedConversation(conversation);
+      setSearch("");
+    } else {
+      toast.error("No User found with this username");
+    }
+  };
+
   return (
     <div>
-      <form className="flex gap-2"
-        action="
-      "
-      >
+      <form onSubmit={handleSubmit} className="flex gap-2">
         <input
-          type="text"
+          type="search"
+          
           placeholder="search"
-          className="rounded-full px-4 py-2 bg-gray-800 "
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="rounded-full text-white px-4 py-2 bg-gray-800"
+          key="search-input"
+          aria-label="Search input"
         />
 
-        <button type="submit" className="bg-gray-700 rounded-full text-white p-3">
+        <button
+          type="submit"
+          className="bg-gray-700 rounded-full text-white p-3"
+          key="search-button"
+          aria-label="Search button"
+        >
           <IoIosSearch />
         </button>
       </form>

@@ -1,48 +1,37 @@
-// import React from 'react'
-// import userAvatar from "../../assets/user.png"
+import React from "react";
+import { useAuthContext } from "../../context/AuthContext";
+import useConversation from "../../zustand/useConversation";
+import { formatTime } from "../../utils/formatTime";
 
-// const Message = () => {
-//   return (
-//     <div>
+const Message = ({ message }) => {
+  const { authUser } = useAuthContext();
+  const { selectedConversation } = useConversation();
 
-//       <div className='chat-image avatar'>
-//         <div className="w-10 rounded-full ">
-//             <img src={userAvatar} alt="user Avatar" />
-//         </div>
-//       </div>
-
-
-// <div className='chat-bubble text-white bg-blue-500'>Hello
-
-// </div>
-      
-//     </div>
-//   )
-// }
-
-// export default Message
+  const messageFromMe = message.senderId === authUser._id;
+  const chatClassName = messageFromMe ? "chat-end" : "chat-start";
+  const profilePic = messageFromMe ? authUser.profilePic : selectedConversation.profilePic;
+  const msgBgColor = messageFromMe ? "bg-green-500" : "bg-blue-500"; // Apply the color based on the sender
 
 
-import React from 'react'
-import userAvatar from "../../assets/avatar.png"
-
-const Message = () => {
+  const formattedTime = formatTime(message.createdAt)
   return (
-    <div className="chat chat-end">
-
-      <div className='chat-image avatar'>
+    <div className={`chat ${chatClassName}`}>
+      <div className="chat-image avatar">
         <div className="w-10 rounded-full">
-            <img src={userAvatar} alt="user Avatar" />
+          <img src={profilePic} alt="user Avatar" />
         </div>
       </div>
 
-      <div className='chat-bubble text-white bg-blue-500'>
-        Hello
+      <div className={`chat-bubble text-white ${msgBgColor}`}>
+        {message.message}
       </div>
-      
-      <div className='chat-footer opacity-50 text-slate-950 items-center flex gap-1'>10:41</div>
-    </div>
-  )
-}
 
-export default Message
+      <div className="chat-footer opacity-50 text-slate-950 items-center flex gap-1">
+        {formattedTime}
+
+      </div>
+    </div>
+  );
+};
+
+export default Message;
