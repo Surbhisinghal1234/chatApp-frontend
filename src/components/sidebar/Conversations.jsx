@@ -7,7 +7,7 @@ const Coversations = () => {
   console.log(conversations)
 
   return (
-    <div className="py-2 flex flex-col overflow-auto">
+    <div className="py-2 flex flex-col overflow-auto max-h-[500px]">
       {conversations.map((conversation, index) => (
         <Conversation
           key={conversation._id}
