@@ -9,7 +9,8 @@ export default defineConfig({
     proxy:{
       "/api":{
         // target:"http://localhost:3000",   
-        target:"https://chatapp-backend-rwxo.onrender.com", 
+        // target:"https://chatapp-backend-rwxo.onrender.com", 
+        target: " https://chat-back-19zh.onrender.com",
 
         secure:false,
         changeOrigin: true,
