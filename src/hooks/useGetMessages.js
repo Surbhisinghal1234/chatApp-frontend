@@ -8,6 +8,8 @@ const useGetMessages = () => {
   const [loading, setLoading] = useState(false);
 
   const { messages, setMessages, selectedConversation } = useConversation();
+  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com"
+
 
   useEffect(() => {
     const getMessages = async () => {

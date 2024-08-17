@@ -7,6 +7,7 @@ const useLogout = () => {
   const [loading, setLoading] = useState(false);
 
   const { setAuthUser } = useAuthContext();
+  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
   const logout = async () => {
     try {
       setLoading(true);

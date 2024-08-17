@@ -8,6 +8,7 @@ const useSendMessage = () => {
 
     const [loading, setLoading] = useState(false)
     const {messages, setMessages, selectedConversation} = useConversation()
+    // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
 
     const sendMessage = async (message)=>{
         try{

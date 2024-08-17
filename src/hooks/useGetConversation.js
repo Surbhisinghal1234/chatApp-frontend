@@ -10,6 +10,8 @@ const useGetConversations = () => {
   const [conversations, setConversations] = useState([]);
   const { authUser } = useAuthContext(); 
 
+  // const url = "https://chatapp-backend-rwxo.onrender.com"
+
   useEffect(() => {
     const getConversations = async () => {
       try {

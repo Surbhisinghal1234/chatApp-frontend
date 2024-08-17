@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const handleInputErrors = ({email,password})=>{
 
+
     if(!email || !password){
         toast.error("please fill all the feilds")
 
@@ -18,6 +19,9 @@ const useLogin = () => {
  
     const [loading,setLoading] = useState(false)
     const {setAuthUser} = useAuthContext()
+
+
+    // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
     const login = async (email,password) =>{
         const checkError = handleInputErrors(
             {
