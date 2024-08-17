@@ -24,6 +24,7 @@ const useGetConversations = () => {
 
         // Fetch request with token
         const res = await fetch("/api/users", {
+          method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`, // Include the token in the Authorization header
             "Content-Type": "application/json"

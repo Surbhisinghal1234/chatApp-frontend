@@ -12,6 +12,7 @@ export default defineConfig({
         target:"https://chatapp-backend-rwxo.onrender.com", 
 
         secure:false,
+        changeOrigin: true,
       }
     }
   }
