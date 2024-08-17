@@ -1,106 +1,106 @@
 
 
-// import { useEffect, useState } from "react";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-// import { useAuthContext } from "../context/AuthContext"; // Adjust the path as necessary
-
-// const useGetConversations = () => {
-//   const [loading, setLoading] = useState(false);
-//   const [conversations, setConversations] = useState([]);
-//   const { authUser } = useAuthContext(); 
-
-//   const url = "https://chatapp-backend-rwxo.onrender.com"
-
-//   useEffect(() => {
-//     const getConversations = async () => {
-//       try {
-//         setLoading(true);
-
-//         const token = authUser?.token;
-//         if (!token) {
-//           throw new Error("No token found");
-//         }
-
-//         // Fetch request with token
-//         const res = await fetch(`${url}/api/users`, {
-//           method: "GET",
-//           headers: {
-//             "Authorization": `Bearer ${token}`, // Include the token in the Authorization header
-//             "Content-Type": "application/json"
-//           }
-//         });
-
-//         // Check if response status is ok
-//         if (!res.ok) {
-//           throw new Error(`Error: ${res.status} ${res.statusText}`);
-//         }
-
-//         const data = await res.json();
-
-//         // Check if the response contains error
-//         if (data.error) {
-//           throw new Error(data.error);
-//         }
-
-//         // Set conversations data to state
-//         setConversations(data);
-//       } catch (error) {
-//         // Display error message
-//         toast.error(error.message);
-//       } finally {
-//         // Reset loading state
-//         setLoading(false);
-//       }
-//     };
-
-//     if (authUser) { // Ensure authUser is available before fetching
-//       getConversations();
-//     }
-//   }, [authUser]); 
-
-//   return { loading, conversations };
-// };
-
-// export default useGetConversations;
-
-
-
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useAuthContext } from "../context/AuthContext"; // Adjust the path as necessary
 
 const useGetConversations = () => {
-  const [loading, setLoading] = useState(false)
-  const [conversations, setConversations] = useState([])
-  const url = "https://chatapp-backend-rwxo.onrender.com"
+  const [loading, setLoading] = useState(false);
+  const [conversations, setConversations] = useState([]);
+  const { authUser } = useAuthContext(); 
 
+  const url = "https://chatapp-backend-rwxo.onrender.com"
 
   useEffect(() => {
     const getConversations = async () => {
       try {
-        setLoading(true)
+        setLoading(true);
 
-        const res = await fetch(`${url}/api/users`)
-
-        const data = await res.json()
-
-        if (data.error) {
-          throw new Error(data.error)
+        const token = authUser?.token;
+        if (!token) {
+          throw new Error("No token found");
         }
 
-        setConversations(data)
+        // Fetch request with token
+        const res = await fetch(`${url}/api/users`, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`, // Include the token in the Authorization header
+            "Content-Type": "application/json"
+          }
+        });
+
+        // Check if response status is ok
+        if (!res.ok) {
+          throw new Error(`Error: ${res.status} ${res.statusText}`);
+        }
+
+        const data = await res.json();
+
+        // Check if the response contains error
+        if (data.error) {
+          throw new Error(data.error);
+        }
+
+        // Set conversations data to state
+        setConversations(data);
       } catch (error) {
-        toast.error(error.message)
+        // Display error message
+        toast.error(error.message);
       } finally {
-        setLoading(false)
+        // Reset loading state
+        setLoading(false);
       }
+    };
+
+    if (authUser) { // Ensure authUser is available before fetching
+      getConversations();
     }
+  }, [authUser]); 
 
-    getConversations()
-  }, [])
+  return { loading, conversations };
+};
 
-  return { loading, conversations }
-}
+export default useGetConversations;
 
-export default useGetConversations
+
+
+// import { useEffect, useState } from "react"
+// import { toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+
+// const useGetConversations = () => {
+//   const [loading, setLoading] = useState(false)
+//   const [conversations, setConversations] = useState([])
+//   const url = "https://chatapp-backend-rwxo.onrender.com"
+
+
+//   useEffect(() => {
+//     const getConversations = async () => {
+//       try {
+//         setLoading(true)
+
+//         const res = await fetch(`${url}/api/users`)
+
+//         const data = await res.json()
+
+//         if (data.error) {
+//           throw new Error(data.error)
+//         }
+
+//         setConversations(data)
+//       } catch (error) {
+//         toast.error(error.message)
+//       } finally {
+//         setLoading(false)
+//       }
+//     }
+
+//     getConversations()
+//   }, [])
+
+//   return { loading, conversations }
+// }
+
+// export default useGetConversations
