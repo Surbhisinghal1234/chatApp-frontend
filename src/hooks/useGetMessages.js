@@ -8,7 +8,7 @@ const useGetMessages = () => {
   const [loading, setLoading] = useState(false);
 
   const { messages, setMessages, selectedConversation } = useConversation();
-  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com"
+  const baseUrl = "https://chatapp-backend-rwxo.onrender.com"
 
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const useGetMessages = () => {
       try {
         setLoading(true);
 
-        const res = await fetch(`/api/messages/${selectedConversation._id}`,{
+        const res = await fetch(`${baseUrl}/api/messages/${selectedConversation._id}`,{
           method: "GET",
           headers: {
             "Content-Type": "application/json"

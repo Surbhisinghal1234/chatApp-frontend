@@ -10,7 +10,7 @@ const useGetConversations = () => {
   const [conversations, setConversations] = useState([]);
   const { authUser } = useAuthContext(); 
 
-  // const url = "https://chatapp-backend-rwxo.onrender.com"
+  const url = "https://chatapp-backend-rwxo.onrender.com"
 
   useEffect(() => {
     const getConversations = async () => {
@@ -23,7 +23,7 @@ const useGetConversations = () => {
         }
 
         // Fetch request with token
-        const res = await fetch("/api/users", {
+        const res = await fetch(`${url}/api/users`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`, // Include the token in the Authorization header

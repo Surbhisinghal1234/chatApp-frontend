@@ -5,16 +5,16 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
-  server:{
-    proxy:{
-      "/api":{
-        // target:"http://localhost:3000",   
-        // target:"https://chatapp-backend-rwxo.onrender.com", 
-        target: "https://chatapp-backend-rwxo.onrender.com",
+  // server:{
+  //   proxy:{
+  //     "/api":{
+  //       // target:"http://localhost:3000",   
+  //       // target:"https://chatapp-backend-rwxo.onrender.com", 
+  //       target: "https://chatapp-backend-rwxo.onrender.com",
 
-        secure:false,
-        changeOrigin: true,
-      }
-    }
-  }
+  //       secure:false,
+  //       changeOrigin: true,
+  //     }
+  //   }
+  // }
 })

@@ -21,7 +21,7 @@ const useLogin = () => {
     const {setAuthUser} = useAuthContext()
 
 
-    // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+    const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
     const login = async (email,password) =>{
         const checkError = handleInputErrors(
             {
@@ -38,10 +38,11 @@ const useLogin = () => {
         try{
 
             setLoading(true)
-       const res =  await fetch("/api/auth/login",{
+       const res =  await fetch(`${baseUrl}/api/auth/login`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json",
+
 
         },
         body:JSON.stringify({

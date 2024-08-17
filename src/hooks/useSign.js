@@ -26,6 +26,8 @@ const handleInputErrors = ({
 const useSign = () => {
   const [loading, setLoading] = useState(false);
   const { setAuthUser } = useAuthContext();
+  const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+
   const signup = async ({
     username,
     email,
@@ -47,7 +49,7 @@ const useSign = () => {
     try {
       setLoading(true);
 
-      const res = await fetch("/api/auth/signup", {
+      const res = await fetch(`${baseUrl}/api/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "Application/json",

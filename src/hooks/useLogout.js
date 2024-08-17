@@ -7,11 +7,11 @@ const useLogout = () => {
   const [loading, setLoading] = useState(false);
 
   const { setAuthUser } = useAuthContext();
-  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+  const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
   const logout = async () => {
     try {
       setLoading(true);
-      const res = await fetch("/api/auth/logout", {
+      const res = await fetch(`${baseUrl}/api/auth/logout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
