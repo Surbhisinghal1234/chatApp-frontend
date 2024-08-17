@@ -68,7 +68,7 @@ export const SocketContextProvider = ({ children }) => {
       const socket = io(
         // "http://localhost:3000", 
         // "https://chatapp-backend-rwxo.onrender.com",
-        "https://chat-back-19zh.onrender.com",
+        "https://chatapp-backend-rwxo.onrender.com",
         {
         query: {
           userId: authUser._id,
