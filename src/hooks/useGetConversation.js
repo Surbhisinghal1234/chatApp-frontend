@@ -67,7 +67,8 @@
 
 
 import { useEffect, useState } from "react"
-import toast from "react-hot-toast"
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const useGetConversations = () => {
   const [loading, setLoading] = useState(false)
