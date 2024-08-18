@@ -9,7 +9,8 @@ const useGetConversations = () => {
   const [loading, setLoading] = useState(false);
   const [conversations, setConversations] = useState([]);
   const { authUser } = useAuthContext(); 
-  const baseUrl = "https://chatapp-backend-rwxo.onrender.com"; 
+  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com"; 
+  const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
 
 
   useEffect(() => {

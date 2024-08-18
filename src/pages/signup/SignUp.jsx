@@ -27,16 +27,16 @@ function SignUp() {
   };
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-red-300">
+      <div className="flex flex-col items-center justify-center min-w-72 mx-auto ">
         <div className="flex flex-col gap-[2rem] items-center w-full p-6 rounded-lg shadow-md bg-gray-200">
           <h1 className="text-3xl font-semibold text-center text-slate-700 ">
             Signup to
-            <span className="text-blue-500 ">Chat Application</span>
+            <span className="text-blue-500 ml-4 ">Chat Application</span>
           </h1>
 
-          <form action="" onSubmit={handleSubmit}>
+          <form action="" onSubmit={handleSubmit} className="gap-4 flex flex-col">
             <div className="flex gap-[2rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label p-2 font-medium">
                 Username
               </label>
               <input
@@ -51,7 +51,7 @@ function SignUp() {
             </div>
 
             <div className="flex gap-[2rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label p-2 font-medium">
                 Email
               </label>
               <input
@@ -66,7 +66,7 @@ function SignUp() {
             </div>
 
             <div className="flex gap-[2rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label p-2 font-medium">
                 Password
               </label>
               <input
@@ -81,7 +81,7 @@ function SignUp() {
             </div>
 
             <div className="flex gap-[2rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label p-2 font-medium">
                 Confirm Password
               </label>
               <input
@@ -101,10 +101,10 @@ function SignUp() {
             />
 
             <Link
-              className="text-sm hover:underline hover:text-blue-200 inline-block"
+              className="text-sm font-medium ml-2 hover:underline hover:text-blue-200 inline-block"
               to={"/login"}
             >
-              {" "}
+            
               Already have an account
             </Link>
 

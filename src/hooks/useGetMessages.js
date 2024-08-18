@@ -57,7 +57,9 @@ const useGetMessages = () => {
   const [loading, setLoading] = useState(false);
   const { messages, setMessages, selectedConversation } = useConversation();
   const { authUser } = useAuthContext(); // Get authUser from AuthContext
-  const baseUrl = "https://chatapp-backend-rwxo.onrender.com"; 
+  // const baseUrl = "https://chatapp-backend-rwxo.onrender.com"; 
+  const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
+
 
   useEffect(() => {
     const getMessages = async () => {

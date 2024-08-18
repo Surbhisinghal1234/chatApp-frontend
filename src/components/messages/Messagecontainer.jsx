@@ -16,7 +16,7 @@ const Messagecontainer = () => {
   },[setSelectedConversation])
   return (
    <>
-   <div className='flex flex-col md:min-w-[20rem]'>
+   <div className='flex flex-col  bg-slate-800 mb-4 '>
     {
 
       !selectedConversation ? (

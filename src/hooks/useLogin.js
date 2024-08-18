@@ -21,7 +21,9 @@ const useLogin = () => {
     const {setAuthUser} = useAuthContext()
 
 
-    const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+    // const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+  const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
+
     const login = async (email,password) =>{
         const checkError = handleInputErrors(
             {

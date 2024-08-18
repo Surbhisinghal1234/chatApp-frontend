@@ -3,8 +3,8 @@ import React from "react";
 const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
   return (
     <>
-      <div className="flex">
-        <div className="form-control">
+      <div className="flex gap-4 ml-2 font-bold">
+        <div className="form-control flex">
           <label
             htmlFor=""
             className={`cursor-pointer gap-2 ${
@@ -18,7 +18,7 @@ const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
           
           />
         </div>
-        <div className="form-control">
+        <div className="form-control flex">
           <label htmlFor=""  className={`cursor-pointer gap-2 ${
               selectedGender === "female" ? "selected" : ""
             }`}>

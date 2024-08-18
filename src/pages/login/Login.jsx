@@ -14,11 +14,11 @@ const {loading, login} = useLogin()
   };
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-red-300">
+      <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
         <div className="flex flex-col gap-[2rem] items-center w-full p-6 rounded-lg shadow-md bg-gray-200">
-          <h1 className="text-3xl font-semibold text-center text-slate-700 ">
+          <h1 className="text-3xl  font-semibold text-center text-slate-700 ">
             Login to
-            <span className="text-blue-500 ">Chat Application</span>
+            <span className="text-blue-500 inline-block ml-4">Chat Application</span>
           </h1>
           <form
             onSubmit={handleSubmit}
@@ -26,19 +26,19 @@ const {loading, login} = useLogin()
             className="flex flex-col gap-[1rem]"
           >
             <div className="flex gap-[2rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label font-medium p-2">
                 Email
               </label>
               <input
                 type="email"
                 placeholder="Enter Username "
-                className="outline-none bg-gray-300 px-2 "
+                className="outline-none text-black bg-gray-300 px-2 "
                 value={email}
                 onChange={(e)=> setEmail(e.target.value)}
               />
             </div>
             <div className="flex gap-[.3rem]">
-              <label htmlFor="" className="label p-2">
+              <label htmlFor="" className="label font-medium p-2">
                 Password
               </label>
               <input
@@ -52,10 +52,10 @@ const {loading, login} = useLogin()
             </div>
 
             <Link
-              className="text-sm hover:underline hover:text-blue-200 inline-block"
+              className="text-sm font-medium hover:underline hover:text-blue-200 inline-block"
               to={"/signup"}
             >
-              {" "}
+             
               {"Don't "} have an account
             </Link>
 

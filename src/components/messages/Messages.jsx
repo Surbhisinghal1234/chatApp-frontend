@@ -53,7 +53,7 @@ const Messages = () => {
   }, [messages])
 
   return (
-    <div className="px-4 overflow-y-scroll h-[560px]">
+    <div className="px-4 overflow-y-scroll ">
       {!loading && messages.length === 0 && (
         <p className="text-center">Start conversation by sending a message</p>
       )}
