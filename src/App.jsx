@@ -16,7 +16,7 @@ function App() {
   
   return (
     <>
-  <div className='flex justify-center items-center md:h-screen'>
+  <div className=''>
     <Routes>
 
       <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/login"}/>}/>

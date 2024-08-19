@@ -30,14 +30,14 @@ const SearchInput = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex gap-2 justify-center lg:justify-normal ">
         <input
           type="search"
           
           placeholder="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="rounded-full text-white px-4 py-2 bg-gray-800"
+          className="rounded-full text-white px-4 py-2 bg-gray-800 w-[20rem] lg:w-auto"
           key="search-input"
           aria-label="Search input"
         />

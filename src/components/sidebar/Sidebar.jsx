@@ -6,9 +6,9 @@ import Conversations from './Conversations'
 
 const Sidebar = () => {
   return (
-    <div className=''>
+    <div className='lg:w-[50%] min-h-[40rem] overflow-scroll p-6 bg-black text-white'>
       <SearchInput/>
-      <div className='divider'></div>
+      <div className=''></div>
    <Conversations/>
       <LogoutButton/>
 

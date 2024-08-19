@@ -20,10 +20,10 @@ const handleSubmit = async (e) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} action="" className="px-4 my-3 ">
+      <form onSubmit={handleSubmit} action="" className="px-4 my-3 sticky bottom-0">
         <div className="w-full relative">
           <input
-            className="border text-xm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white"
+            className="border bottom-0 text-xm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white"
             type="text"
             placeholder="Enter Your Text"
             value={message}

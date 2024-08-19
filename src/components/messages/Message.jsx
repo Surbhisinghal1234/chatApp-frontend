@@ -10,7 +10,7 @@ const Message = ({ message }) => {
   const messageFromMe = message.senderId === authUser._id;
   const chatClassName = messageFromMe ? "chat-end" : "chat-start";
   const profilePic = messageFromMe ? authUser.profilePic : selectedConversation.profilePic;
-  const msgBgColor = messageFromMe ? "bg-green-500" : "bg-blue-500"; // Apply the color based on the sender
+  const msgBgColor = messageFromMe ? "bg-[#075e54]" : "bg-white text-black"; 
 
 
   const formattedTime = formatTime(message.createdAt)
@@ -22,7 +22,7 @@ const Message = ({ message }) => {
         </div>
       </div>
 
-      <div className={`chat-bubble text-white ${msgBgColor}`}>
+      <div className={`chat-bubble font-medium ${msgBgColor}`}>
         {message.message}
       </div>
 

@@ -50,7 +50,6 @@ const {loading, login} = useLogin()
                 onChange={(e)=> setPassword(e.target.value)}
               />
             </div>
-
             <Link
               className="text-sm font-medium hover:underline hover:text-blue-200 inline-block"
               to={"/signup"}
@@ -58,10 +57,7 @@ const {loading, login} = useLogin()
              
               {"Don't "} have an account
             </Link>
-
             <div>
-
-
               <button className="bg-red-500 rounded-full px-2 py-1 font-bold text-white "  disabled={loading}>
                 {
                   loading ? (<span className="loading loading-spinner">
@@ -71,8 +67,6 @@ const {loading, login} = useLogin()
                   )
                 }
               </button>
-
-
             </div>
           </form>
         </div>

@@ -4,6 +4,7 @@ import MessageInput from './MessageInput'
 import useConversation from '../../zustand/useConversation'
 import {TiMessages} from "react-icons/ti"
 import { useAuthContext } from '../../context/AuthContext'
+import wallpaper from "../../assets/wallpaper-1.jpg"
 
 const Messagecontainer = () => {
 
@@ -16,19 +17,19 @@ const Messagecontainer = () => {
   },[setSelectedConversation])
   return (
    <>
-   <div className='flex flex-col  bg-slate-800 mb-4 '>
+   <div className='flex flex-col lg:w-[50%] min-h-[40rem]' style={{ backgroundImage: `url(${wallpaper})` }}>
     {
 
       !selectedConversation ? (
 
         <NoChatSelected/>
       ) :(<>
-         <div className="bg-slate-500 px-4 py-2 mb-2 ">
-        <span>To:</span>
-        <span className='text-gey-900 font-bold'>{selectedConversation ?.username}</span>
+         <div className="bg-slate-800 px-4 py-2 mb-2 text-white">
+        <span className='font-bold'>To:</span>
+        <span className='text-white ml-2 font-bold'>{selectedConversation ?.username}</span>
        </div>
         <Messages/>
-        <MessageInput/>
+        <MessageInput className=" bottom-0 bg-white p-4"/>
     </>
 
       )
@@ -46,7 +47,7 @@ const NoChatSelected=()=>{
 
   // const {selectedConversation, setSelectedConversation} = useConversation() 
   return (
-    <div className='flex items-center justify-center w-full h-full'>
+    <div className='flex items-center justify-center w-full h-full'   >
       <div className='px-4 text-center font-semibold flex flex-col items-center gap-2 ms:text-xl '>
         <p>Welcome {authUser.username}  </p>
         <img src={authUser.profilePic} className='w-20 aspect-square' alt="" />
