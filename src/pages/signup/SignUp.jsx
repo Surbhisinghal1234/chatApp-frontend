@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GenderCheckbox from "../../components/GenderCheckbox";
 import { Link } from "react-router-dom";
 import useSign from "../../hooks/useSign";
-import "./SignUp.css"
+import "./signUp.css"
 
 function SignUp() {
   const [formData, setFormData] = useState({
