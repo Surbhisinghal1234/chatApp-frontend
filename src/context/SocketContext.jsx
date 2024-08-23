@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react"
 import { createContext } from "react"
 import { useAuthContext } from "./AuthContext"
 import { io } from "socket.io-client"
-
 export const SocketContext = createContext()
 
 export const useSocketContext = () => {
@@ -15,7 +14,6 @@ export const SocketContextProvider = ({ children }) => {
   const { authUser } = useAuthContext()
   const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
 
-
   useEffect(() => {
     if (authUser) {
       const socket = io(baseUrl, {
@@ -25,7 +23,6 @@ export const SocketContextProvider = ({ children }) => {
       })
 
       setSocket(socket)
-
       socket.on("getOnlineUsers", (users) => {
         setOnlineUsers(users)
       })

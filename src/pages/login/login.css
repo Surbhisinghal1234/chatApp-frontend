@@ -1,0 +1,29 @@
+.login-bg{
+    background: linear-gradient(to right, #f6d4f579, #cb9ac46c), url("../../assets/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.login-content{
+    /* background:linear-gradient(to right, #f6d4f5, #cb9ac4b8) ; */
+    background:linear-gradient(to right, #774971c4, #cb9ac4d3) ;
+    box-shadow: 1px 1px 4px 4px #22021ec4;
+    
+
+}
+.btn{
+    background: linear-gradient(to right, #774971db, #cb9ac4cb);
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    transition: all 9s ease-in-out ;
+
+
+
+}
+.btn:hover{
+    background: white;
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    color:  #22021ec4;
+
+}

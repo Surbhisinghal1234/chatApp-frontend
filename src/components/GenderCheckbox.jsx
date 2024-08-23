@@ -3,23 +3,23 @@ import React from "react";
 const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
   return (
     <>
-      <div className="flex gap-4 ml-2 font-bold">
-        <div className="form-control flex">
+      <div className="flex gap-6 ">
+        <div className=" flex gap-4">
           <label
             htmlFor=""
-            className={`cursor-pointer gap-2 ${
+            className={`text-[16px] font-medium cursor-pointer gap-2 ${
                selectedGender === "male" ? "selected" : ""
             }`}
           >
             Male
           </label>
           <input type="checkbox" checked={selectedGender === "male"} 
-          onChange={()=> onCheckboxChange("male")}
+          onChange={()=> onCheckboxChange("male")} className="w-full"
           
           />
         </div>
-        <div className="form-control flex">
-          <label htmlFor=""  className={`cursor-pointer gap-2 ${
+        <div className=" flex gap-4">
+          <label htmlFor=""  className={`text-[16px] font-medium cursor-pointer gap-2 ${
               selectedGender === "female" ? "selected" : ""
             }`}>
             Female

@@ -1,0 +1,34 @@
+.signUp-bg{
+    background: linear-gradient(to right, #f6d4f5a3, #cb9ac493), url("../../assets/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    
+}
+.signUp-content{
+    /* background:linear-gradient(to right, #f6d4f5, #cb9ac4b8) ; */
+    background:linear-gradient(to right, #270622c4, #cb9ac4d3) ;
+    box-shadow: 2px 2px 3px 3px #22021ec4 !important;
+    color: white;
+    
+
+}
+.btn{
+    background: linear-gradient(to right, #774971db, #cb9ac4cb);
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    color: white;
+    transition: all 9s ease-in-out;
+
+
+}
+.btn:hover{
+    background: white;
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    color:  #22021ec4;
+
+}
+.inp1{
+    background-color:#27062275;
+    box-shadow: 1px 1px 2px 2px black !important;
+}
