@@ -15,7 +15,7 @@ const Conversation = ({conversation, lastIndex}) => {
   const isOnline = onlineUsers.includes(conversation._id)
   return (
     <>
-      <div className={`flex pl-4 py-2 gap-2 items-center hover:bg-gray-500 cursor-pointer ${isSelected? "bg-white": ""}`}  
+      <div className={`flex pl-4 py-2 gap-2 items-center hover:bg-[#f6d4f579] cursor-pointer ${isSelected? "bg-[#e9e1e532]": ""}`}  
         onClick={()=> setSelectedConversation(conversation)}
       >
         <div className={`avatar ${isOnline ? "online": ""}`}>
@@ -26,12 +26,12 @@ const Conversation = ({conversation, lastIndex}) => {
         </div>
         <div className="flex flex-col flex-1  ">
           <div className="flex gap-3 justify-between">
-            <p className={`font-bold ${isSelected? "text-black" : "text-white"}`}>{conversation.username}</p>
+            <p className={`font-bold ${isSelected? "text-white" : "text-white"}`}>{conversation.username}</p>
             {/* <span className="text-xl">Just Now</span> */}
           </div>
         </div>
       </div>
-     {!lastIndex && <div className="border-2 border-b border-slate-600 "></div>} 
+     {!lastIndex && <div className="border-2 border-b border-[#f6d4f579]"></div>} 
     </>
   );
 };

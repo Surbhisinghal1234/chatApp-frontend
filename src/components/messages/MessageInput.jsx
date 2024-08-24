@@ -23,7 +23,7 @@ const handleSubmit = async (e) => {
       <form onSubmit={handleSubmit} action="" className="px-4 my-3 sticky bottom-0">
         <div className="w-full relative">
           <input
-            className="border bottom-0 text-xm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white"
+            className=" bottom-0 text-xm rounded-full block w-full px-5 py-3  bg-transparent" style={{ boxShadow: 'inset 0px 0px 8px rgba(0, 0, 0, 0.6)' }}
             type="text"
             placeholder="Enter Your Text"
             value={message}
@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
 
           <button
             type="submit "
-            className=" absolute flex items-center pe-3 inset-y-0 end-0"
+            className=" absolute flex items-center pe-5 inset-y-0 end-0"
           >
             {
               loading ? (

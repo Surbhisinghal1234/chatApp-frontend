@@ -6,7 +6,7 @@ import Conversations from './Conversations'
 
 const Sidebar = () => {
   return (
-    <div className='lg:w-[50%] min-h-[40rem] overflow-scroll p-6 bg-black text-white'>
+    <div className='lg:w-[40%] min-h-[40rem] overflow-scroll flex flex-col p-6 bg-[#22021e] rounded-3xl '>
       <SearchInput/>
       <div className=''></div>
    <Conversations/>

@@ -17,19 +17,20 @@ const Messagecontainer = () => {
   },[setSelectedConversation])
   return (
    <>
-   <div className='flex flex-col lg:w-[50%] min-h-[40rem]' style={{ backgroundImage: `url(${wallpaper})` }}>
+   {/* style={{ backgroundImage: `url(${wallpaper})` }}  */}
+   <div className='flex flex-col text-white lg:w-[40%] max-h-[40rem] bg-[#381023] rounded-3xl overflow-scroll' >
     {
 
       !selectedConversation ? (
 
         <NoChatSelected/>
       ) :(<>
-         <div className="bg-slate-800 px-4 py-2 mb-2 text-white">
+         <div className=" rounded-t-2xl pl-6 py-4 mb-2 text-white">
         <span className='font-bold'>To:</span>
         <span className='text-white ml-2 font-bold'>{selectedConversation ?.username}</span>
        </div>
         <Messages/>
-        <MessageInput className=" bottom-0 bg-white p-4"/>
+        <MessageInput className=" bg-white p-4 mt-auto"/>
     </>
 
       )
