@@ -15,7 +15,7 @@ export default {
       },
       backgroundImage: {
         'chatLeft':  'linear-gradient(135deg,#ff9157,#ff4156)',
-        "chatRight": "linerar-gradient(135deg, #ee2e6a,#8e26c2)",
+        "chatRight": "linear-gradient(135deg, #ee2e6a,#8e26c2)",
         "boxLeft":   "linear-gradient(135deg, #e52d71, #8e25bf)" // Custom linear gradient
       },
     },

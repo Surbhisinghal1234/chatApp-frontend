@@ -11,4 +11,9 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-  
+  .chat-bubble:before {
+    position: absolute;
+    bottom: 0px;
+    height: 0 !important;
+     width: 0 !important;
+    }

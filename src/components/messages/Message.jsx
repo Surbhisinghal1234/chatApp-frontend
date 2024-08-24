@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import useConversation from "../../zustand/useConversation";
 import { formatTime } from "../../utils/formatTime";
+import "../../App.css"
 
 const Message = ({ message }) => {
   const { authUser } = useAuthContext();
@@ -10,7 +11,9 @@ const Message = ({ message }) => {
   const messageFromMe = message.senderId === authUser._id;
   const chatClassName = messageFromMe ? "chat-end" : "chat-start";
   const profilePic = messageFromMe ? authUser.profilePic : selectedConversation.profilePic;
-  const msgBgColor = messageFromMe ? "bg-[#075e54]" : "bg-[chatLeft] text-black"; 
+  const msgBgColor = messageFromMe 
+  ? "bg-chatRight" 
+  : "bg-chatLeft text-black"; 
 
 
   const formattedTime = formatTime(message.createdAt)
@@ -26,7 +29,7 @@ const Message = ({ message }) => {
         {message.message}
       </div>
 
-      <div className="chat-footer opacity-50 text-slate-950 items-center flex gap-1">
+      <div className="chat-footer opacity-50 text-white items-center flex gap-1">
         {formattedTime}
 
       </div>
