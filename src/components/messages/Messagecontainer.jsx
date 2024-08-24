@@ -18,7 +18,7 @@ const Messagecontainer = () => {
   return (
    <>
    {/* style={{ backgroundImage: `url(${wallpaper})` }}  */}
-   <div className='flex flex-col text-white lg:w-[40%] max-h-[40rem] bg-[#381023] rounded-3xl overflow-scroll' >
+   <div className='flex flex-col py-[3rem] md:py-0 text-white lg:w-[40%] max-h-[40rem] bg-[#381023] rounded-3xl overflow-scroll' >
     {
 
       !selectedConversation ? (
