@@ -5,6 +5,8 @@ import useConversation from '../../zustand/useConversation'
 import {TiMessages} from "react-icons/ti"
 import { useAuthContext } from '../../context/AuthContext'
 import wallpaper from "../../assets/wallpaper-1.jpg"
+import "../../App.css"
+
 
 const Messagecontainer = () => {
 
@@ -18,7 +20,8 @@ const Messagecontainer = () => {
   return (
    <>
    {/* style={{ backgroundImage: `url(${wallpaper})` }}  */}
-   <div className='flex flex-col py-[3rem] md:py-0 text-white lg:w-[40%] max-h-[40rem] bg-[#381023] rounded-3xl overflow-scroll' >
+   <div className='flex flex-col w-[18rem] xs:w-[23rem] lg:w-[23rem] h-[40rem]  py-[3rem] md:py-0 text-white bg-[#381023] rounded-3xl overflow-scroll' style={{ boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.7)' }} >
+
     {
 
       !selectedConversation ? (
