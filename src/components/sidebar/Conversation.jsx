@@ -15,7 +15,7 @@ const Conversation = ({conversation, lastIndex}) => {
   const isOnline = onlineUsers.includes(conversation._id)
   return (
     <>
-      <div className={`flex pl-4 py-2 gap-2 items-center hover:bg-[#f6d4f579] cursor-pointer ${isSelected? "bg-[#e9e1e532]": ""}`}  
+      <div className={` bg-[#59082e] rounded-2xl  flex pl-4 py-2 gap-2 items-center hover:bg-boxLeft cursor-pointer ${isSelected? "bg-boxLeft": ""}`}  
         onClick={()=> setSelectedConversation(conversation)}
       >
         <div className={`avatar ${isOnline ? "online": ""}`}>
@@ -31,7 +31,7 @@ const Conversation = ({conversation, lastIndex}) => {
           </div>
         </div>
       </div>
-     {!lastIndex && <div className="border-2 border-b border-[#f6d4f579]"></div>} 
+     {/* {!lastIndex && <div className="border-2 border-b border-[#f6d4f579]"></div>}  */}
     </>
   );
 };
