@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react"
 import Message from "./Message"
 import useGetMessages from "../../hooks/useGetMessages"
 import useListenMessages from "../../hooks/useListenMessages"
+import "../../pages/home/home.css"
 
 const Messages = () => {
   const { messages, loading } = useGetMessages()
@@ -19,7 +20,7 @@ const Messages = () => {
   }, [messages])
 
   return (
-    <div className="px-4 overflow-scroll ">
+    <div className="px-4 boxScroll ">
       {!loading && messages.length === 0 && (
         <p className="text-center">Start conversation by sending a message</p>
       )}

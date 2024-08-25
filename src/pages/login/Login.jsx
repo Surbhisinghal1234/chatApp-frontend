@@ -19,7 +19,7 @@ const {loading, login} = useLogin()
         <div className="flex flex-col gap-[2rem] items-center md:p-12 p-6 rounded-lg max:w-[28rem]  login-content">
           <h1 className="md:text-3xl sm:text-2xl text-xl font-semibold text-center text-slate-700  ">
             Login to
-            <span className="text-black inline-block ml-4">Chat Application</span>
+            {/* <span className="text-black inline-block ml-4">Chat Application</span> */}
           </h1>
           <form
             onSubmit={handleSubmit}

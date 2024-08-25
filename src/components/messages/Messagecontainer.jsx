@@ -6,7 +6,7 @@ import {TiMessages} from "react-icons/ti"
 import { useAuthContext } from '../../context/AuthContext'
 import wallpaper from "../../assets/wallpaper-1.jpg"
 import "../../App.css"
-
+import "../../pages/home/home.css"
 
 const Messagecontainer = () => {
 
@@ -17,10 +17,10 @@ const Messagecontainer = () => {
     // cleanup function
     return ()=> setSelectedConversation(null)
   },[setSelectedConversation])
+
   return (
    <>
-   {/* style={{ backgroundImage: `url(${wallpaper})` }}  */}
-   <div className='flex flex-col w-[19rem] xs:w-[23rem] lg:w-[23rem] h-[40rem]  py-[3rem] md:py-0 text-white bg-[#381023] rounded-3xl overflow-scroll' style={{ boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.7)' }} >
+   <div className=' flex flex-col w-[19rem] xs:w-[23rem] lg:w-[23rem] h-[40rem] text-white bg-[#381023] rounded-3xl' style={{ boxShadow: '0px 15px 30px rgba(0, 0, 0, 0.7)' }} >
 
     {
 
@@ -32,8 +32,8 @@ const Messagecontainer = () => {
         <span className='font-bold'>To:</span>
         <span className='text-white ml-2 font-bold'>{selectedConversation ?.username}</span>
        </div>
-        <Messages/>
-        <MessageInput className=" bg-white p-4 mt-auto"/>
+        <Messages className="flex-1" />
+        <MessageInput className=" "/>
     </>
 
       )

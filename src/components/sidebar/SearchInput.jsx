@@ -37,14 +37,15 @@ const SearchInput = () => {
           placeholder="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="rounded-full text-white px-4 py-2 bg-[#e9e1e532] shadow-sm shadow-slate-500 w-[16rem] lg:w-[23rem]"
+          className="rounded-full text-white px-4 py-2 bg-[#e9e1e532]  w-[14rem] lg:w-[23rem] shadow-shadowForLeftBox"
+        
           key="search-input"
           aria-label="Search input"
         />
 
         <button
           type="submit"
-          className="bg-gray-700 rounded-full text-white p-3"
+          className="bg-[#e9e1e532] rounded-full text-white p-3 shadow-shadowForLeftBox"
           key="search-button"
           aria-label="Search button"
         >

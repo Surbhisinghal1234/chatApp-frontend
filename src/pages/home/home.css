@@ -1,20 +1,27 @@
 .home-bg{
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.285), rgba(0, 0, 0, 0.337)), url("../../assets/img4.jpg");
-    height: 100vh;
-    width: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-color: ; */
+     /* background: linear-gradient(to right, rgba(255, 255, 255, 0.285), rgba(0, 0, 0, 0.337)), url("../../assets/img4.jpg"); */
     background: linear-gradient(to bottom , #282f37d5, #111c22c1);
 }
 
 /* #ff9157  */
 /* #ff4156  */
-
 /* #ee2e6a  */
 /* #8e26c2  */
-
 /* #e52d71  */
-
 /* #8e25bf  */
+
+.boxScroll {
+    overflow-y: scroll; 
+ }
+ 
+ .boxScroll::-webkit-scrollbar {
+    display: none; 
+ }
+ 
+ .boxScroll {
+    scrollbar-width: none; 
+ }
+ 
+ .boxScroll {
+    -ms-overflow-style: none; 
+ }
