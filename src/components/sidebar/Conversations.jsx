@@ -7,7 +7,7 @@ const Coversations = () => {
   console.log(conversations)
 
   return (
-    <div className=" flex flex-col gap-3 overflow-y-scroll my-4">
+    <div className=" flex flex-col gap-3 boxScroll my-4">
       {conversations.map((conversation, index) => (
         <Conversation
           key={conversation._id}

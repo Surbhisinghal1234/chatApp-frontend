@@ -5,7 +5,7 @@ import "./home.css"
 
 const Home = () => {
   return (
-    <div className='home-bg h-auto  py-[3rem] flex justify-center items-center'>
+    <div className='home-bg py-[4rem] flex justify-center items-center'>
 
     <div className=' flex  gap-10 mt-auto flex-col lg:flex-row rounded-md min:h-[40rem] justify-center '>
       <Sidebar />
