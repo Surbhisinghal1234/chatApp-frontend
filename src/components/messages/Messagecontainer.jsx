@@ -28,9 +28,11 @@ const Messagecontainer = () => {
 
         <NoChatSelected/>
       ) :(<>
-         <div className=" rounded-t-2xl pl-6 py-4 mb-2 text-white">
-        <span className='font-bold'>To:</span>
-        <span className='text-white ml-2 font-bold'>{selectedConversation ?.username}</span>
+         <div className=" bg-[#59082e] rounded-t-2xl pl-6 py-4 mb-2 text-white  flex items-center gap-2">
+        <img src={selectedConversation ?.profilePic} alt="" className='h-10 w-10' />
+        <span className='text-white ml-2 font-bold'>
+          {selectedConversation ?.username}</span>
+         
        </div>
         <Messages className="flex-1" />
         <MessageInput className=" "/>
