@@ -1,29 +1,65 @@
-.login-bg{
+.light-theme .login-bg{
     background: linear-gradient(to right, #f6d4f579, #cb9ac46c), url("../../assets/img1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    
-    
+    background-position: center;  
 }
-.login-content{
-    /* background:linear-gradient(to right, #f6d4f5, #cb9ac4b8) ; */
+.light-theme .login-content{
     background:linear-gradient(to right, #774971c4, #cb9ac4d3) ;
     box-shadow: 1px 1px 4px 4px #22021ec4;
-    
+  
+}
+
+.dark-theme .login-bg{
+
+  background-color: white;
+}
+.dark-theme .login-content{
+  background: linear-gradient(to bottom, #010101, #202f58) ;
+  /* box-shadow: 1px 1px 4px 4px #22021ec4; */
+  color: white;
 
 }
-.btn{
+.light-theme .btn{
     background: linear-gradient(to right, #774971db, #cb9ac4cb);
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;
     transition: all 9s ease-in-out ;
-
-
-
 }
-.btn:hover{
+.light-theme .btn:hover{
     background: white;
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;
     color:  #22021ec4;
-
 }
+
+.dark-theme  .btn{
+  background: linear-gradient(to right, #774971db, #cb9ac4cb);
+  box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+  transition: all 9s ease-in-out ;
+}
+.dark-theme  .btn:hover{
+  background: white;
+  box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+  color:  #22021ec4;
+}
+
+
+.light-theme .input-field {
+    background-color: #22021eaa; 
+    color: white;
+ }
+  
+ .dark-theme .input-field {
+    background-color: #0000008F;
+    color: white;
+  }
+  
+ .login-bg.light-theme {
+    background-color: #ffffff;
+  }
+  
+ .login-bg.dark-theme {
+    background-color: #121212;
+  }
+
+  
+ 

@@ -1,0 +1,53 @@
+/* Basic theme styles */
+body.light-theme {
+    background-color: #ffffff;
+    /* color: #000000; */
+  }
+  
+  body.dark-theme {
+    background-color: #121212;
+    /* color: #ffffff; */
+  }
+  
+  .theme-toggle-container {
+    margin-bottom: 1rem;
+    background-color: red;
+    width: 52px;
+    height: 26px;
+    border-radius: 30px;
+  }
+  
+  .theme-switch input {
+    display: none;
+  }
+  
+  .theme-switch .slider {
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 34px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  
+  .theme-switch .slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.4s;
+  }
+  
+  .theme-switch input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  .theme-switch input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
