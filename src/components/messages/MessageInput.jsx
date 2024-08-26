@@ -1,11 +1,18 @@
 import React, { useState,useEffect,useRef } from "react";
-import { BsSend } from "react-icons/bs";
+import { BsSend , BsEmojiSmile } from "react-icons/bs";
 import useSendMessage from "../../hooks/useSendMessage";
+import data from '@emoji-mart/data'
+import Picker from '@emoji-mart/react'
+import { useTheme } from '@mui/material/styles';
+import "../../pages/home/home.css"
 
 const MessageInput = () => {
   const [message, setMessage] = useState("");
+  const [showEmojiPicker, setShowEmojiPicker] = useState(false); 
+  
 
   const { loading, sendMessage } = useSendMessage();
+  const theme = useTheme()
 
   const textareaRef = useRef(null);
   useEffect(() => {
@@ -24,6 +31,8 @@ const MessageInput = () => {
       }
     }
   }, [message]);
+
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -33,8 +42,13 @@ const handleSubmit = async (e) => {
 
   await sendMessage(message);
   setMessage("");
+  // setShowEmojiPicker(false)
 };
 
+
+const handleEmojiSelect = (emoji) => {
+  setMessage((prevMessage) => prevMessage + emoji.native);
+};
   return (
     <div className=" p-4 mt-auto">
       <form onSubmit={handleSubmit} action="" className="px-4 my-3 sticky bottom-0">
@@ -56,6 +70,9 @@ const handleSubmit = async (e) => {
   onChange={(e) => setMessage(e.target.value)}
   rows="1"
 />
+
+
+ 
         {/* SEND MESSAGE BUTTON  */}
           <button
             type="submit"
@@ -73,6 +90,38 @@ const handleSubmit = async (e) => {
               <BsSend />
             )}
           </button>
+
+          {/* <Picker theme={theme.palette.mode} data={data} onEmojiSelect={console.log} /> */}
+
+   {/* EMOJI BUTTON */}
+   <button
+            type="button"
+            className="absolute flex text-[12px] items-center justify-center w-7 h-7 bg-gray-200 text-black rounded-full"
+            style={{
+              top: "50%",
+              right: "60px",
+              transform: "translateY(-50%) translateX(-10%)",
+              boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.8)",
+            }}
+            onClick={() => setShowEmojiPicker(!showEmojiPicker)}
+          >
+            <BsEmojiSmile />   </button>
+    {/* EMOJI PICKER */}
+    {showEmojiPicker && (
+            <div
+              className=" absolute bottom-10 boxScroll rounded-2xl"
+              style={{ boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.8)",   width: "260px", 
+                height: "240px", 
+                overflowY: "scroll", 
+                right: '-220px', }}
+            >
+              <Picker
+                theme={theme.palette.mode}
+                data={data}
+                onEmojiSelect={handleEmojiSelect}
+              />
+            </div>
+          )}
         </div>
       </form>
     </div>
