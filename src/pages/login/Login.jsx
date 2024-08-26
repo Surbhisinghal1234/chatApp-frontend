@@ -5,6 +5,7 @@ import ThemeToggle from "../../components/theme/ThemeToggle";
 import { useTheme } from "../../hooks/useTheme";
 import "./login.css";
 import img1 from "../../assets/robot.png"
+import img2 from "../../assets/login-robot-2.png"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Login = () => {
 
       <div className="flex login-content rounded-lg items-center justify-center p-10 gap-10">
       <div className="login-left-bg h-[20rem] w-[15rem] hidden md:flex">
-          <img src={img1} alt="" className="h-[100%] w-[100%] object-cover" />
+          <img src={theme === 'light' ? img2 : img1}alt="" className="h-[100%] w-[100%] object-cover" />
       </div>
       <div className=" flex flex-col gap-10">
         <h1 className={`text-xl sm:text-2xl md:text-3xl font-semibold text-center ${theme === "light" ? "text-slate-700" : "text-white"}`}>
