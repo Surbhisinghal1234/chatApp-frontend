@@ -9,32 +9,61 @@
     box-shadow: 1px 1px 4px 4px #22021ec4;
   
 }
+/* #314989
+50%
+#000000 */
 
 .dark-theme .login-bg{
+    background: linear-gradient(to bottom,#0000006b, #314889b1 ), url("../../assets/login-bg2.jpg");
 
-  background-color: white;
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+  
 }
 .dark-theme .login-content{
-  background: linear-gradient(to bottom, #010101, #202f58) ;
-  /* box-shadow: 1px 1px 4px 4px #22021ec4; */
+  background: linear-gradient(to bottom, #010101, #202f58ad) ;
+  box-shadow: 1px 1px 2px 2px white;
   color: white;
 
 }
 .light-theme .btn{
     background: linear-gradient(to right, #774971db, #cb9ac4cb);
-    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
-    transition: all 9s ease-in-out ;
+    box-shadow: 1px 1px 1px 1px #22021ec4 !important;
+    /* transition: all 9s ease-in-out ; */
+    height: 2.5rem !important;
+    min-height: 2.5rem !important;
+    
 }
-.light-theme .btn:hover{
+/* .light-theme .btn:hover{
     background: white;
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;
     color:  #22021ec4;
+} */
+/* .login-left-bg{
+  height: 20rem;
+  width: 15rem;
+
+}
+.login-left-bg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+} */
+.light-theme  .btn-same:hover{
+  background: white;
+  box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+  color:  #22021ec4;
 }
 
+
 .dark-theme  .btn{
-  background: linear-gradient(to right, #774971db, #cb9ac4cb);
-  box-shadow: 1px 1px 2px 2px #22021ec4 !important;
-  transition: all 9s ease-in-out ;
+  height: 2rem !important;
+  min-height: 2.5rem !important;
+  background: white;
+
+  color: black;
+ 
 }
 .dark-theme  .btn:hover{
   background: white;

@@ -11,9 +11,9 @@ body.light-theme {
   
   .theme-toggle-container {
     margin-bottom: 1rem;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.656);
     width: 52px;
-    height: 26px;
+    height: 25px;
     border-radius: 30px;
   }
   
