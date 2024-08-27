@@ -1,30 +1,83 @@
-.signUp-bg{
+.light-theme  .signUp-bg{
     background: linear-gradient(to right, #f6d4f5a3, #cb9ac493), url("../../assets/img2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
        
 }
-.signUp-content{
+.light-theme  .signUp-content{
     background:linear-gradient(to right, #270622c4, #cb9ac4d3) ;
     box-shadow: 2px 2px 3px 3px #22021ec4 !important;
     color: white;    
 
 }
-.btn{
+
+.dark-theme .signUp-bg{
+    background: linear-gradient(to bottom,#0000006b, #314889b1 ), url("../../assets/login-bg2.jpg");
+
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+  
+}
+.dark-theme .signUp-content{
+  background: linear-gradient(to bottom, #010101, #202f58ad) ;
+  box-shadow: 1px 1px 2px 2px white;
+  color: white;
+
+}
+.light-theme .btn{
     background: linear-gradient(to right, #774971db, #cb9ac4cb);
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;
     color: white;
-    transition: all 9s ease-in-out;
+    /* transition: all 9s ease-in-out; */
 
 }
-.btn:hover{
+/* .btn:hover{
     background: white;
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;
     color:  #22021ec4;
 
-}
-.inp1{
+} */
+.light-theme  .btn-same:hover{
+    background: white;
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    color:  #22021ec4;
+  }
+  
+  
+  .dark-theme  .btn{
+    height: 2rem !important;
+    min-height: 2.5rem !important;
+    background: white;
+    color: black;
+   
+  }
+  .dark-theme  .btn:hover{
+    background: white;
+    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
+    color:  #22021ec4;
+  }
+
+/* .inp1{
     background-color:#27062275;
     box-shadow: 1px 1px 2px 2px black !important;
-}
+} */
+
+.light-theme .input-field {
+    background-color: #22021eaa; 
+    color: white;
+ }
+  
+ .dark-theme .input-field {
+    background-color: #0000008F;
+    color: white;
+  }
+  
+ .login-bg.light-theme {
+    background-color: #ffffff;
+  }
+  
+ .login-bg.dark-theme {
+    background-color: #121212;
+  }
