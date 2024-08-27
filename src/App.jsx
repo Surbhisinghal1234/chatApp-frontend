@@ -26,10 +26,12 @@ function App() {
       <Route path = "/signup"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/> */}
      
      <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/welcome"}/>}/>
-      <Route path = "/welcome"  element={   authUser ? <Navigate to={"/"}/> :<Login/>}/>
+      <Route path = "/welcome"  element={   authUser ? <Navigate to={"/"}/> :<Welcomepage/>}/>
       
 
-      <Route path = "/welcome"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/>
+      <Route path = "/welcome"  element={authUser ? <Navigate to={"/"}/>:<Welcomepage/>}/>
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
 
 
 
