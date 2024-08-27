@@ -6,6 +6,7 @@ import Login from './pages/login/Login'
 import SignUp from './pages/signup/SignUp'
 import { ToastContainer } from "react-toastify";
 import { useAuthContext } from './context/AuthContext'
+import Welcomepage from './pages/welcomePage/Welcomepage'
 
 function App() {
 
@@ -16,13 +17,19 @@ function App() {
     <>
   <div className=''>
     <Routes>
-
-      <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/login"}/>}/>
+      <Route path="/welcome" element={<Welcomepage/>}/>
+      
+      {/* <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/login"}/>}/>
       <Route path = "/login"  element={   authUser ? <Navigate to={"/"}/> :<Login/>}/>
-      {/* <Route path = "/login"  element={<Login/>}/> */}
+      
 
-      <Route path = "/signup"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/>
-      {/* <Route path = "/signup"  element={<SignUp/>}/> */}
+      <Route path = "/signup"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/> */}
+     
+     <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/welcome"}/>}/>
+      <Route path = "/welcome"  element={   authUser ? <Navigate to={"/"}/> :<Login/>}/>
+      
+
+      <Route path = "/welcome"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/>
 
 
 
