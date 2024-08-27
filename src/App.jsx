@@ -19,11 +19,11 @@ function App() {
     <Routes>
       <Route path="/welcome" element={<Welcomepage/>}/>
       
-      {/* <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/login"}/>}/>
-      <Route path = "/login"  element={   authUser ? <Navigate to={"/"}/> :<Login/>}/>
+       {/* <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/login"}/>}/> */}
+       <Route path = "/login"  element={   authUser ? <Navigate to={"/"}/> :<Login/>}/>
       
 
-      <Route path = "/signup"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/> */}
+       <Route path = "/signup"  element={authUser ? <Navigate to={"/"}/>:<SignUp/>}/>
      
      <Route path = "/"  element={ authUser ?   <Home/> : <Navigate to = {"/welcome"}/>}/>
       <Route path = "/welcome"  element={   authUser ? <Navigate to={"/"}/> :<Welcomepage/>}/>
