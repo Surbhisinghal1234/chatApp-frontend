@@ -54,8 +54,21 @@
   background: white;
   box-shadow: 1px 1px 2px 2px #22021ec4 !important;
   color:  #22021ec4;
+  transition: all .5s ease-in-out;
+
 }
 
+.dark-theme .btn-same{
+  box-shadow: 1px 1px 2px 2px black !important;
+
+} 
+.dark-theme .btn-same:hover{
+  background-color: #381d1d01 !important;
+  color: white !important;
+  border: none !important;
+  transition: all .5s ease-in-out;
+
+} 
 
 .dark-theme  .btn{
   height: 2rem !important;

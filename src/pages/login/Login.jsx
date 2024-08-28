@@ -4,8 +4,10 @@ import useLogin from "../../hooks/useLogin";
 import ThemeToggle from "../../components/theme/ThemeToggle";
 import { useTheme } from "../../hooks/useTheme";
 import "./login.css";
-import img1 from "../../assets/robot.png"
-import img2 from "../../assets/login-robot-2.png"
+// import img1 from "../../assets/robot.png"
+// import img2 from "../../assets/login-robot-2.png"
+import img2 from "../../assets/robot-img7.png"
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,12 +25,12 @@ const Login = () => {
 
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
-      <div className="flex login-content rounded-lg items-center justify-center p-10 gap-10">
-      <div className="login-left-bg h-[20rem] w-[15rem] hidden md:flex">
-          <img src={theme === 'light' ? img2 : img1}alt="" className="h-[100%] w-[100%] object-cover" />
+      <div className="flex login-content rounded-lg items-center justify-center py-8 px-6 sm:p-10 gap-10">
+      <div className="login-left-bg h-[14rem] w-[14rem] hidden md:flex">
+          <img src={theme === 'light' ? img2 : img2}alt="" className="h-[100%] w-[100%] object-cover" />
       </div>
-      <div className=" flex flex-col gap-10 md:w-[20rem] px-4">
-        <h1 className={`text-xl sm:text-2xl md:text-3xl font-semibold text-center ${theme === "light" ? "text-slate-700" : "text-white"}`}>
+      <div className=" flex flex-col gap-10 w-auto md:w-[20rem] sm:px-4">
+        <h1 className={`text-xl sm:text-2xl md:text-3xl font-semibold text-center ${theme === "light" ? "text-slate-900" : "text-white"}`}>
           Login 
           {/* <span className={`text-black inline-block ml-3  ${theme === "light" ? "text-slate-700" : "text-white"}`}>Chat Application</span> */}
         </h1>
@@ -65,7 +67,7 @@ const Login = () => {
           >
             {loading ? <span className="loading  loading-spinner"></span> : "Login"}
           </button>
-          <Link className={`text-lg font-medium hover:underline  ${theme==="light"? "hover:text-black" : "hover:text-gray-500"}`}   to="/signup">
+          <Link className={`text-lg font-medium hover:underline   ${theme==="light"? "hover:text-black text-black" : "hover:text-gray-300"}`}   to="/signup">
             {"Don't "} have an account?
           </Link>
           <Link className="btn btn-same  rounded-full text-center px-8 py-2 font-medium border-none" to="/signup">

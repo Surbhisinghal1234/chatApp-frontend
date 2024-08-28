@@ -1,18 +1,8 @@
 .dark-theme .welcome-bg{
     background: linear-gradient(to bottom , #080a14, #263868);
-    /* height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* width: 100%; */
-
+   
 }
 .light-theme  .welcome-bg{
     background: linear-gradient(to right, #270622d6, #cb9ac4);
-    /* height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* width: 100%; */
-       
+    
 }
