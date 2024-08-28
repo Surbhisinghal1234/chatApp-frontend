@@ -21,17 +21,16 @@ const Login = () => {
   return (
     <div className="flex flex-col justify-center items-center h-screen login-bg">
 
-     
         <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
       <div className="flex login-content rounded-lg items-center justify-center p-10 gap-10">
       <div className="login-left-bg h-[20rem] w-[15rem] hidden md:flex">
           <img src={theme === 'light' ? img2 : img1}alt="" className="h-[100%] w-[100%] object-cover" />
       </div>
-      <div className=" flex flex-col gap-10">
+      <div className=" flex flex-col gap-10 md:w-[20rem] px-4">
         <h1 className={`text-xl sm:text-2xl md:text-3xl font-semibold text-center ${theme === "light" ? "text-slate-700" : "text-white"}`}>
-          Login to
-          <span className={`text-black inline-block ml-4  ${theme === "light" ? "text-slate-700" : "text-white"}`}>Chat Application</span>
+          Login 
+          {/* <span className={`text-black inline-block ml-3  ${theme === "light" ? "text-slate-700" : "text-white"}`}>Chat Application</span> */}
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
@@ -74,7 +73,7 @@ const Login = () => {
           </Link>
 
         </form>
-        
+
         </div>
       </div>
     </div>

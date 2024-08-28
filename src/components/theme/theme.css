@@ -1,34 +1,27 @@
-body.light-theme {
-    background-color: #ffffff;
-  }
-  
-  body.dark-theme {
-    background-color: #121212;
-  }
-  
+
   .theme-toggle-container {
-    margin-bottom: 1rem;
-    background-color: rgba(255, 0, 0, 0.656);
-    width: 52px;
-    height: 25px;
-    border-radius: 30px;
+    margin-bottom: 2.5rem;
+    margin-right: 2rem;
+
   }
-  
-  .theme-switch input {
+  .theme-lable{
+    position: relative;
+  }
+  .theme-lable input {
     display: none;
   }
   
-  .theme-switch .slider {
-    width: 50px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 34px;
-    position: relative;
+  .theme-lable .slider {
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #774971;
+    border-radius: 2rem;
     cursor: pointer;
     transition: background-color 0.4s;
+    position: absolute;
   }
   
-  .theme-switch .slider:before {
+  .theme-lable .slider:before {
     content: "";
     position: absolute;
     width: 18px;
@@ -40,11 +33,11 @@ body.light-theme {
     transition: transform 0.4s;
   }
   
-  .theme-switch input:checked + .slider {
-    background-color: #66bb6a;
+  .theme-lable input:checked + .slider {
+    background-color: #000000d4;
   }
   
-  .theme-switch input:checked + .slider:before {
-    transform: translateX(26px);
+  .theme-lable input:checked + .slider:before {
+    transform: translateX(1.6rem);
   }
   

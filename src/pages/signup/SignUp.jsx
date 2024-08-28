@@ -3,11 +3,8 @@ import GenderCheckbox from "../../components/GenderCheckbox";
 import { Link } from "react-router-dom";
 import useSign from "../../hooks/useSign";
 import ThemeToggle from "../../components/theme/ThemeToggle";
-
-// import { useTheme } from "@emotion/react";
 import { useTheme } from "../../hooks/useTheme";
 import "./signUp.css"
-
 import img1 from "../../assets/robot-img6.png"
 import img2 from "../../assets/robot-img4.png"
 
@@ -37,15 +34,14 @@ function SignUp() {
   };
   return (
     <>
-      <div className="flex flex-col  justify-center items-center h-screen signUp-bg">
+      <div className="flex flex-col  justify-center items-center md:py-2.5 py-10 h-screen md:h-auto signUp-bg">
       <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
 
       <div className="flex w-auto px-10  md:w-[35rem] flex-col signUp-content rounded-lg items-center justify-center pb-5 ">
       <div className="signUp-left-bg h-[13rem] w-[13rem] hidden md:flex">
           <img src={theme === 'light' ? img2 : img2}alt="" className="h-[100%] w-[100%] object-cover" />
       </div>
-      <div className=" flex flex-col gap-5">
-        {/* <div className="flex flex-col gap-[2rem] items-center min:w-[25rem] md:p-12 p-6 rounded-lg shadow-black shadow-md signUp-content"> */}
+      <div className=" flex flex-col gap-5 mt-4 mb-2 md:mb-0 md:mt-0">
 
         <h1 className={`text-xl sm:text-2xl md:text-3xl font-semibold text-center ${theme === "light" ? "text-slate-950" : "text-white"}`}>
           Sign Up
@@ -72,15 +68,7 @@ function SignUp() {
               {/* <label htmlFor="" className="md:text-[1.1rem] font-medium">
                 Email
               </label> */}
-              {/* <input
-                type="email"
-                placeholder="Enter email "
-                className="inp1 input-field outline-none rounded-md w-[8rem] md:w-auto px-2 py-2"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-              /> */}
+             
                <input
                 type="email"
                 placeholder="Email "
@@ -126,29 +114,12 @@ function SignUp() {
               onCheckboxChange={handleCheckboxChange}
               selectedGender={formData.gender}
             />
-
-            {/* <Link
-              className="md:text-[18px] font-medium  hover:underline hover:text-black inline-block"
-              to={"/login"}
-            >
-            
-              Already have an account
-            </Link> */}
-             <Link className="btn btn-same  rounded-full text-center px-8 py-2 font-bold border-none" to="/login">
+             <Link className="btn btn-same hover:underline   rounded-full text-center px-8 py-2 font-bold border-none" to="/login">
              Already have an account/Login
           </Link>
 
             <div>
-              {/* <button
-                className="btn border-none rounded-full md:text-[16px] px-6 py-[6px] font-medium  "
-                disabled={loading}
-              >
-                {loading ? (
-                  <span className="loading loading-spinner"></span>
-                ) : (
-                  "Sign up"
-                )}
-              </button> */}
+              
                 <button
             type="submit"
             className={`btn btn-same w-full rounded-full font-bold  px-8  text-white border-none ${loading ? "bg-gray-400" : "bg-blue-500"}`}
@@ -159,7 +130,6 @@ function SignUp() {
             </div>
           </form>
 
-        {/* </div> */}
       </div>
       </div>
 
