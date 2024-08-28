@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import img1 from "../../assets/robot.png";
-import img2 from "../../assets/robot-img6.png"
+import img2 from "../../assets/robot-img8.png"
 import img3 from "../../assets/robot.png"
 import img4 from "../../assets/login-robot-2.png"
 import "../login/login.css"
@@ -35,8 +35,8 @@ const Welcomepage = () => {
       <ThemeToggle theme={theme} toggleTheme ={toggleTheme}/>
      <div className='flex flex-col justify-center items-center gap-8'>
 
-      <div className=" h-[13rem] w-[13rem] md:flex">
-          <img src={theme === 'light' ? img4 : img4}alt="" className="h-[100%] w-[100%] object-cover" />
+      <div className=" h-[13rem] w-[13rem] md:flex circular-path">
+          <img src={theme === 'light' ? img2 : img2}alt="" className="h-[100%] w-[100%] object-cover rotate " />
       </div>
       <div className=''>
         <span className={`font-bold text-2xl md:text-4xl px-4 ${theme==="light" ? "text-black": "text-white"}`}>{text}</span>
