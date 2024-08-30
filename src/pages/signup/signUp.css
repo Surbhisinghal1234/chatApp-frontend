@@ -33,12 +33,7 @@
     /* transition: all 9s ease-in-out; */
 
 }
-/* .btn:hover{
-    background: white;
-    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
-    color:  #22021ec4;
 
-} */
 .light-theme  .btn-same:hover{
     background: white;
     box-shadow: 1px 1px 2px 2px #22021ec4 !important;

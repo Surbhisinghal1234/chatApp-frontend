@@ -22,7 +22,7 @@ const Messages = () => {
   return (
     <div className="px-4 boxScroll ">
       {!loading && messages.length === 0 && (
-        <p className="text-center">Start conversation by sending a message</p>
+        <p className="text-center">Say hello to start the chat!</p>
       )}
 
       {!loading &&

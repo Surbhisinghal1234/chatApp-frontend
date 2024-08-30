@@ -2,24 +2,8 @@
     background: linear-gradient(to bottom , #080a14, #263868);
    
 }
-.light-theme  .welcome-bg{
-    background: linear-gradient(to right, #270622d6, #cb9ac4);
-    
+.light-theme .welcome-bg {
+    background: linear-gradient(to bottom, #270622d6 10%, #cb9ac4 90%);
 }
 
-/* @keyframes circularMove {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
-    }
-  }
-  
-  .circular-path {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    animation: circularMove 5s linear infinite;
-  } */
   

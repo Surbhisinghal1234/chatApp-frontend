@@ -56,6 +56,7 @@ const useLogin = () => {
        localStorage.setItem("user", JSON.stringify(data))
 
        setAuthUser(data)
+       console.log("Logged in successfully"); 
         }
         catch(error){
             toast.error(error.message)

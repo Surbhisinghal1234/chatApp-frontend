@@ -9,9 +9,7 @@
     box-shadow: 1px 1px 4px 4px #22021ec4;
   
 }
-/* #314989
-50%
-#000000 */
+
 
 .dark-theme .login-bg{
     background: linear-gradient(to bottom,#0000006b, #314889b1 ), url("../../assets/login-bg2.jpg");
@@ -35,21 +33,7 @@
     min-height: 2.5rem !important;
     
 }
-/* .light-theme .btn:hover{
-    background: white;
-    box-shadow: 1px 1px 2px 2px #22021ec4 !important;
-    color:  #22021ec4;
-} */
-/* .login-left-bg{
-  height: 20rem;
-  width: 15rem;
 
-}
-.login-left-bg img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-} */
 .light-theme  .btn-same:hover{
   background: white;
   box-shadow: 1px 1px 2px 2px #22021ec4 !important;

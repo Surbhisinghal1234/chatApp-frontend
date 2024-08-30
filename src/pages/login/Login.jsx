@@ -65,7 +65,7 @@ const Login = () => {
             className={`btn btn-same rounded-full font-bold  px-8  text-white border-none ${loading ? "bg-gray-400" : "bg-blue-500"}`}
             disabled={loading}
           >
-            {loading ? <span className="loading  loading-spinner"></span> : "Login"}
+            {loading ? <span className="loading text-white  loading-spinner"></span> : "Login"}
           </button>
           <Link className={`text-lg font-medium hover:underline   ${theme==="light"? "hover:text-black text-black" : "hover:text-gray-300"}`}   to="/signup">
             {"Don't "} have an account?

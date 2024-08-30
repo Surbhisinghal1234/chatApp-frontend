@@ -71,11 +71,13 @@ const useSign = () => {
         throw new Error(data.error);
       }
 
-    //   console.log(data);
+      console.log(data);
 
     localStorage.setItem("user", JSON.stringify(data))
 
     setAuthUser(data)
+    console.log("Sign in successfully"); 
+
     } catch (error) {
       toast.error(error.message);
     } finally {

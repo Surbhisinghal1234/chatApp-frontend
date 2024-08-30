@@ -125,7 +125,7 @@ function SignUp() {
             className={`btn btn-same w-full rounded-full font-bold  px-8  text-white border-none ${loading ? "bg-gray-400" : "bg-blue-500"}`}
             disabled={loading}
           >
-            {loading ? <span className="loading  loading-spinner"></span> : "Sign up"}
+            {loading ? <span className="loading text-white  loading-spinner"></span> : "Sign up"}
           </button>
             </div>
           </form>
