@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit": "npm audit && npm audit fix",  
+    "update": "npm update"   
   },
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
