@@ -8,6 +8,7 @@ import "./welcome.css";
 import { Link } from 'react-router-dom'; 
 import ThemeToggle from '../../components/theme/ThemeToggle';
 import { useTheme } from "../../hooks/useTheme";
+import gitHubImg from "../../assets/github.png"
 
 const Welcomepage = () => {
 
@@ -29,7 +30,14 @@ const Welcomepage = () => {
   }, []); 
 
   return (
-    <div className='welcome-bg flex flex-col items-center justify-center h-screen text-center gap-2'>
+    <>
+    <div className='welcome-bg h-screen pt-2'>
+
+    <div className="flex justify-end mr-5 ">
+    <a className="text-[12px] font-bold text-white" href="https://github.com/Surbhisinghal1234" ><img className="w-16  rounded-full" src={gitHubImg} alt="" />GitHub profile</a>
+  </div>
+    <div className='flex flex-col items-center justify-center  text-center gap-2'>
+     
 
 
       <ThemeToggle theme={theme} toggleTheme ={toggleTheme}/>
@@ -52,6 +60,10 @@ const Welcomepage = () => {
       </div>
     </div>
     </div>
+    </div>
+
+    </>
+
 
   );
 }
