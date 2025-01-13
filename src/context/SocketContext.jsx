@@ -12,7 +12,9 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null)
   const [onlineUsers, setOnlineUsers] = useState([])
   const { authUser } = useAuthContext()
-  const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
+  // const baseUrl = import.meta.env.VITE_APP_API_URL || "http://localhost:3000" ;
+  const baseUrl = "https://chatapp-backend-rwxo.onrender.com";
+
 
   useEffect(() => {
     if (authUser) {
